@@ -7,8 +7,6 @@ $(document).ready(function() {
     fillContainer = function(html) {
       $('#ipsum').text(html);
       api_word = getDinos.responseJSON[0][0];
-      console.log(api_word);
-      console.log(getDinos.responseJSON[0][0]);
     },
     oops = function() {
       console.log('Where did all the dinosaurs go?');
@@ -22,7 +20,6 @@ $(document).ready(function() {
       var guessed = $('#guessedLetter').val();
       newDino['api_word'] = getDinos.responseJSON[0][0];
       newDino['guessed'] = guessed;
-      console.log(newDino);
       newDino.checker();
     });
 
