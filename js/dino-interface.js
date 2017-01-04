@@ -16,6 +16,14 @@ $(document).ready(function() {
 
     var newDino = new Dino(api_word);
 
+    $('#start-game').click(function() {
+      newDino['api_word'] = getDinos.responseJSON[0][0];
+      newDino.startGame();
+      $('#guessForm').show();
+      $('#start-game').hide();
+      console.log(newDino);
+    });
+
     $('#submit').click(function(){
       var guessed = $('#guessedLetter').val();
       newDino['guessed'] = guessed;
@@ -23,10 +31,9 @@ $(document).ready(function() {
       newDino.winner();
     });
 
-    $('#start-game').click(function() {
-      newDino['api_word'] = getDinos.responseJSON[0][0];
-      newDino.startGame();
-      console.log(newDino);
+    $('#new-game').click(function() {
+      location.reload();
     });
+
 
 });

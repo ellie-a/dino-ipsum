@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="build/css/vendor.css">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="build/css/application.css">
     <script src="build/js/vendor.min.js"></script>
     <script type="text/javascript" src="build/js/app.js"></script>
     <title></title>
@@ -11,7 +11,8 @@
   <body>
     <div class="container">
       <button type="button" id="start-game">Start</button>
-      <form>
+      <button type="button" id="new-game">New Game</button>
+      <form id="guessForm">
         <label for="letterGuess">Guess a letter:</label>
         <input id="guessedLetter" type="text" name="name">
         <button id="submit" type="button">Guess</button>
