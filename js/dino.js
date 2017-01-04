@@ -21,8 +21,12 @@ Dino.prototype.checker = function(){
   var dinoResult = this.dinoResult;
   if(dinoResult.indexOf(letter) === -1){
     if(wordArray.indexOf(letter) === -1) {
-      guessCount--;
-      alert('you have ' + guessCount + ' guesses left');
+      if(guessCount > 1) {
+        guessCount--;
+        alert('you have ' + guessCount + ' guesses left');
+      } else {
+        alert('you lost son');
+      }
     }
     while(wordArray.indexOf(letter) !== -1){
       var current_index = wordArray.indexOf(letter);
@@ -33,6 +37,13 @@ Dino.prototype.checker = function(){
   this.guessCount = guessCount;
   this.dinoResult = dinoResult;
   return dinoResult;
+};
+
+Dino.prototype.winner = function() {
+  if(this.dinoResult.indexOf('-') === -1){
+    alert('you won son');
+  }
+
 };
 
 exports.dinoModule = Dino;

@@ -20,6 +20,7 @@ $(document).ready(function() {
       var guessed = $('#guessedLetter').val();
       newDino['guessed'] = guessed;
       $('#answers').text(newDino.checker().join(''));
+      newDino.winner();
     });
 
     $('#start-game').click(function() {
