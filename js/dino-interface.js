@@ -25,7 +25,6 @@ $(document).ready(function() {
     $('#start-game').click(function() {
       newDino['api_word'] = getDinos.responseJSON[0][0];
       newDino.createArray();
-      console.log(newDino);
     });
 
 });
