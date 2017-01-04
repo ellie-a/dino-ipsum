@@ -20,7 +20,7 @@ $(document).ready(function() {
       var guessed = $('#guessedLetter').val();
       newDino['api_word'] = getDinos.responseJSON[0][0];
       newDino['guessed'] = guessed;
-      newDino.checker();
+      $('#answers').text(newDino.checker().join(''));
     });
 
 });
