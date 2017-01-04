@@ -4,8 +4,8 @@ function Dino() {
   this.dinoResult = [];
 }
 
-Dino.prototype.result = function() {
-  this.dinoResult = new Array(this.api_word.length);
+Dino.prototype.createArray = function() {
+  this.dinoResult = new Array(this.api_word.length).fill('-');
 }
 
 Array.prototype.insert = function (index, item) {
@@ -27,6 +27,7 @@ Dino.prototype.checker = function(){
   }
 
   console.log(this.dinoResult);
+  console.log("dinoresult var" + dinoResult);
   this.dinoResult = dinoResult;
   return dinoResult;
 };

@@ -18,9 +18,14 @@ $(document).ready(function() {
 
     $('#submit').click(function(){
       var guessed = $('#guessedLetter').val();
-      newDino['api_word'] = getDinos.responseJSON[0][0];
       newDino['guessed'] = guessed;
       $('#answers').text(newDino.checker().join(''));
+    });
+
+    $('#start-game').click(function() {
+      newDino['api_word'] = getDinos.responseJSON[0][0];
+      newDino.createArray();
+      console.log(newDino);
     });
 
 });
