@@ -26,6 +26,7 @@ $(document).ready(function() {
     $('#guessForm').submit(function(event) {
       event.preventDefault();
       var guessed = $('#guessedLetter').val();
+      $('#guessedLetter').val('');
       if (newDino.validator(guessed)){
         $('#answers').text(newDino.checker().join(''));
       }
