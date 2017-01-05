@@ -1,6 +1,5 @@
 var Dino = require('./../js/dino.js').dinoModule;
 
-
 $(document).ready(function() {
   var api_word = "";
   var getDinos = $.get('http://dinoipsum.herokuapp.com/api/?format=json&paragraphs=1&words=1'),
@@ -26,8 +25,9 @@ $(document).ready(function() {
 
     $('#submit').click(function(){
       var guessed = $('#guessedLetter').val();
-      newDino['guessed'] = guessed;
-      $('#answers').text(newDino.checker().join(''));
+      if (newDino.validator(guessed)){
+        $('#answers').text(newDino.checker().join(''));
+      }
       newDino.winner();
     });
 
