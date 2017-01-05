@@ -1,0 +1,356 @@
+.dino {
+  position: relative;
+  margin-top: 15vh;
+  margin-left: 10vw;
+}
+
+
+/* Head */
+.head {
+  display: none;
+  position: relative;
+  width: 3.4375em;
+  height: 2em;
+  background: $white;
+  border: 0.1875em solid $purple;
+  border-radius: 0.85em;
+  z-index: 2;
+  div {
+    position: absolute;
+  }
+  .nose {
+    top: .375em;
+    left: .4375em;
+    width: 0.625em;
+    .nostril {
+      position: static;
+      height: 0.25em;
+      width: 0.25em;
+      border-top-left-radius: 50%;
+      border-top-right-radius: 50%;
+      background-color: $purple;
+      float: left;
+      &:first-child {
+        margin-right: 0.05em;
+      }
+    }
+  }
+  .eye {
+    height: 0.5em;
+    width: 0.5em;
+    top: .25em;
+    right: 0.6em;
+    background: $purple;
+    border-radius: 50%;
+  }
+  .mouth {
+    width: 2em;
+    height: 0.56em;
+    top: 0.75em;
+    border: 0.1em #502445 solid;
+    left: -0.19em;
+    border-bottom-left-radius: 20%;
+    background-color: $background;
+    background-image: linear-gradient(41deg, white 25%, transparent 25%, transparent 75%, white 75%, white);
+    background-size: 10px 12px;
+
+  }
+  .bottom-jaw-wrapper {
+    overflow: hidden;
+    bottom: 0;
+    left: 1em;
+    height: 0.4em;
+    width: 1.3em;
+    .bottom-jaw {
+      position: relative;
+      height: 1em;
+      width: 1.3em;
+      border-right: 0.075em solid #502445;
+      border-top: 0.075em solid $purple;
+      border-top-right-radius: 50%;
+      border-bottom-right-radius: 20%;
+    }
+  }
+}
+
+
+/* NECK */
+.neck {
+  display: none;
+  position: relative;
+  z-index: 1;
+  height: 3.875em;
+  width: 1.625em;
+  background: $purple;
+  left: 1.8em;
+  top: -0.75em;
+}
+
+/* Vertibrates */
+.vert {
+  position: relative;
+  height: 0.35em;
+  width: 0.6875em;
+  margin: 0 auto;
+  margin-bottom: 0.2em;
+  border-bottom-right-radius: 25%;
+  border-bottom-left-radius: 25%;
+}
+
+
+/* Chest */
+
+.chest {
+  display: none;
+  position: relative;
+  top: -1.73em;
+  left: 1.8em;
+  width: 2.5em;
+  height: 4em;
+  background: $purple;
+  border-bottom-left-radius: 70%;
+  .chest-top-cover {
+    position: absolute;
+    top: 0em;
+    left: 1.63em;
+    width: 1.5em;
+    height: 1em;
+    background: $background;
+    z-index: 2;
+    border-bottom-left-radius: 50%;
+  }
+  .vert {
+    position: absolute;
+    top: 1em;
+    left: 0.48em;
+    height: 0.6em;
+    border-radius: 25%;
+  }
+}
+
+
+/* ARM */
+.arm {
+  position: absolute;
+  height: 2.5625em;
+  left: 1em;
+  z-index: 1;
+  top: 1.25em;
+  &.bone, .bone {
+    border: 3px solid $purple;
+    background-color: white;
+    width: 0.375em;
+  }
+}
+.forearm {
+
+  position: absolute;
+  border: 3px solid $purple;
+  z-index: 3;
+  width: 0.375em;
+  height: 1.375em;
+  transform: rotate(-50deg);
+  top: 2.5625em;
+  left: 0.5em;
+  .cap:first-child {
+    top: 1.15em;
+    transform: rotate(180deg);
+  }
+  .cap + .cap {
+    top: -0.47em;
+  }
+}
+.wrist {
+  position: absolute;
+  top: 2.7em;
+  left: 2px;
+  height: 1.25em;
+  width: 0.375em;
+  border: 3px solid $purple;
+}
+.hand {
+  position: absolute;
+  top: 3.85em;
+  left: 2px;
+  width: 1em;
+  height: 0.375em;
+  border: 3px solid $purple;
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+}
+
+.torso {
+  display: none;
+  position: relative;
+  top: -4.725em;
+  left: 4.3em;
+  width: 4.25em;
+  height: 3em;
+  background: $purple;
+  border-bottom-right-radius: 50%;
+}
+
+/* Spine */
+.spine {
+
+  position: absolute;
+  background: $white;
+  border: 3px solid $purple;
+  width: 0.45em;
+  height: 2.25em;
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 50%;
+  top: 1.05em;
+  &.first {
+    left: 1.5em;
+  }
+  &.second {
+    left: 2em;
+    height: 2em;
+  }
+  &.third {
+    height: 1.875em;
+    width: 0.4em;
+    top: 0.05em;
+  }
+  &.fourth {
+    height: 1.5em;
+    top: 0.05em;
+    left: 0.45em;
+    width: 0.375em
+  }
+  &.fifth {
+    height: 1em;
+    top: 0.05em;
+    left: 0.85em;
+    width: 0.375em
+  }
+}
+
+
+/* Tail */
+.tail {
+  display: none;
+  position: absolute;
+  background: $purple;
+  width: 3.5em;
+  height: 0.75em;
+  top: 5.15em;
+  left: 8.4em;
+  border-top-right-radius: 75%;
+  border-bottom-right-radius: 75%;
+  .vert {
+    transform: rotate(-90deg);
+    width: 0.25em;
+    height: 0.15em;
+    float: left;
+    margin-right: 0.1em;
+    margin-top: 0.275em;
+  }
+}
+
+
+/* Hip */
+.hip {
+
+  position: relative;
+  left: 1.4em;
+  top: 5px;
+  width: 2.4em;
+  height: 1.5em;
+  border-radius: 0 0 2em 2em;
+  background-color: white;
+  .hole {
+    position: relative;
+    top: 0.4em;
+    left: 0.4em;
+    height: 0.9em;
+    width: 0.9em;
+    background: $purple;
+    border-radius: 50%;
+  }
+}
+
+/* Leg */
+.leg {
+  display: none;
+  position: absolute;
+  top: 1em;
+  left: 1.5em;
+  .bone {
+    position: relative;
+    border: 4px solid $purple;
+  }
+  .first {
+    height: 3em;
+    width: 0.75em;
+    z-index: 3;
+    .cap {
+      width: 0.7em;
+      height: 0.5em;
+    }
+    .cap + .cap {
+      width: 0.725em;
+      left: -3px;
+      top: 2.25em;
+      transform: rotate(-180deg);
+    }
+  }
+  .knee {
+    z-index: 2;
+    width: 0.625em;
+    height: 1.25em;
+    transform: rotate(-45deg);
+    left: 0.5em;
+    top: -0.25em;
+  }
+  .calf {
+
+    z-index: 3;
+    width: 0.55em;
+    height: 1.75em;
+    top: -0.4em;
+    border-width: 5px;
+    left: 1em;
+    .cap {
+      top: -0.5em;
+      height: 0.5em;
+      width: 0.5em;
+      left: -4px;
+      border-width: 4px;
+      border-bottom-width: 0;
+    }
+    .cap + .cap {
+      transform: rotate(180deg);
+      top: 0.9385em;
+    }
+  }
+  .foot {
+    width: 2em;
+    height: 0.45em;
+    border-top-right-radius: 50%;
+    border-top-left-radius: 50%;
+    top: -0.5em;
+    left: -0.5em;
+  }
+}
+
+/* Bone Caps */
+.cap {
+
+  background-color: $white;
+  height: 8px;
+  width: 12px;
+  border-radius: 12px 12px 0 0;
+  top: -8px;
+  position: relative;
+  border: 3px solid $purple;
+  max-width: none;
+  left: -3px;
+  border-bottom-width: 0;
+  border-bottom-color: transparent;
+}
+
+.bone {
+  background-color: $white;
+}

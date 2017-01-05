@@ -28,6 +28,7 @@ $(document).ready(function() {
       if (newDino.validator(guessed)){
         $('#answers').text(newDino.checker().join(''));
       }
+      $('#guessedLetters').text(newDino['wrongLetters'].join(' '));
       newDino.winner();
     });
 

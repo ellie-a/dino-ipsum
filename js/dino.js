@@ -3,6 +3,7 @@ function Dino() {
   this.guessed = "";
   this.dinoResult = [];
   this.guessCount= " ";
+  this.wrongLetters = [];
 }
 
 Dino.prototype.startGame = function() {
@@ -15,10 +16,12 @@ Dino.prototype.checker = function(){
   var letter = this.guessed.toLowerCase();
   var guessCount = this.guessCount;
   var dinoResult = this.dinoResult;
+  var wrongLetters = this.wrongLetters;
 
     if(dinoResult.indexOf(letter) === -1){
       if(wordArray.indexOf(letter) === -1) {
         if(guessCount >= 1) {
+          wrongLetters.push(letter);
           guessCount--;
           alert('you have ' + guessCount + ' guesses left');
         } else {
@@ -33,6 +36,7 @@ Dino.prototype.checker = function(){
         }
       }
     }
+    this.wrongLetters = wrongLetters;
     this.guessCount = guessCount;
     this.dinoResult = dinoResult;
     return dinoResult;
