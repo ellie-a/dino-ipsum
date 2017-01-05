@@ -7,5 +7,15 @@
   color: white;
   font-size: 155%;
   letter-spacing: 1.5px;
+}
 
+#new-game, #submit {
+  width: 25%;
+  padding: 2%;
+  border-radius: 20px;
+  border: none;
+  background-color: $blue;
+  color: white;
+  font-family: $main;
+  letter-spacing: 2px;
 }

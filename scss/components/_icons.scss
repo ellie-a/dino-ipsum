@@ -109,7 +109,9 @@
   height: 4em;
   background: $purple;
   border-bottom-left-radius: 70%;
+  border-top-right-radius: 50%;
   .chest-top-cover {
+    display: none;
     position: absolute;
     top: 0em;
     left: 1.63em;
@@ -275,8 +277,8 @@
 .leg {
   display: none;
   position: absolute;
-  top: 1em;
-  left: 1.5em;
+  top: 6.5em;
+  left: 6em;
   .bone {
     position: relative;
     border: 4px solid $purple;

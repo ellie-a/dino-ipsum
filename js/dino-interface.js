@@ -23,12 +23,43 @@ $(document).ready(function() {
       console.log(newDino.api_word);
     });
 
-    $('#submit').click(function(){
+    $('#guessForm').submit(function(event) {
+      event.preventDefault();
       var guessed = $('#guessedLetter').val();
       if (newDino.validator(guessed)){
         $('#answers').text(newDino.checker().join(''));
       }
       $('#guessedLetters').text(newDino['wrongLetters'].join(' '));
+      if (newDino['guessCount'] === 6) {
+        $('.head').show();
+      } else if (newDino['guessCount'] === 5) {
+        $('.head').show();
+        $('.neck').show();
+      } else if (newDino['guessCount'] === 4) {
+        $('.head').show();
+        $('.neck').show();
+        $('.chest').show();
+      } else if (newDino['guessCount'] === 3) {
+        $('.head').show();
+        $('.neck').show();
+        $('.chest').show();
+        $('.torso').show();
+      } else if (newDino['guessCount'] === 2) {
+        $('.head').show();
+        $('.neck').show();
+        $('.chest').show();
+        $('.torso').show();
+        $('.leg').show();
+      } else if (newDino['guessCount'] <= 1) {
+        $('.head').show();
+        $('.neck').show();
+        $('.chest').show();
+        $('.torso').show();
+        $('.leg').show();
+        $('.tail').show();
+        $('.dead').show();
+      }
+
       newDino.winner();
     });
 

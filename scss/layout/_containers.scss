@@ -2,8 +2,16 @@
   display: flex;
   align-self: center;
   justify-content: center;
-  background-color: $background;
+  // background-color: $background;
+  background-image: url('/../img/background.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
   height: 100vh;
+  font-family: $main;
+  color: white;
+  letter-spacing: 5px;
+  font-size: 105%;
+  
 
   .start-page {
     margin-top: 15%;
@@ -14,6 +22,10 @@
     margin-top: 10%;
   }
 }
+#start-game {
+  font-family: $main;
+  color: white;
+}
 
 .game {
   display: none;
@@ -21,4 +33,12 @@
 
 #ipsum {
   display: none;
+  font-family: $main;
+  color: white;
+}
+
+.dead {
+  display: none;
+  font-family: $main;
+  color: white;
 }
