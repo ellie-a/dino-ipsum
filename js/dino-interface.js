@@ -12,7 +12,7 @@ $(document).ready(function() {
     };
 
     getDinos.then(fillContainer, oops);
-
+    console.log(api_word);
     var newDino = new Dino(api_word);
 
     $('#start-game').click(function() {
@@ -58,6 +58,7 @@ $(document).ready(function() {
         $('.leg').show();
         $('.tail').show();
         $('.dead').show();
+        $('#ipsum').show();
       }
 
       newDino.winner();
