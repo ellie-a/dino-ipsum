@@ -41,6 +41,7 @@ Dino.prototype.checker = function(){
 Dino.prototype.winner = function() {
   if(this.dinoResult.indexOf('-') === -1){
     alert('you won son');
+    $('#ipsum').show();
   }
 
 };

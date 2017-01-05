@@ -80,7 +80,8 @@ gulp.task('serve', function() {
   });
   gulp.watch(['js/*.js'], ['jsBuild']);
   gulp.watch(['bower.json'], ['bowerBuild']);
-  gulp.watch(["scss/*.scss"], ['cssBuild']);
+  gulp.watch(["css/*.css"], ['cssBuild']);
+
 });
 
 gulp.task('jsBuild', ['jsBrowserify', 'jshint'], function(){

@@ -19,9 +19,9 @@ $(document).ready(function() {
     $('#start-game').click(function() {
       newDino['api_word'] = getDinos.responseJSON[0][0];
       newDino.startGame();
-      $('#guessForm').show();
+      $('.game').show();
       $('#start-game').hide();
-      console.log(newDino);
+      console.log(newDino.api_word);
     });
 
     $('#submit').click(function(){

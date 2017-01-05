@@ -1,0 +1,19 @@
+.container {
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  background-color: $background;
+  height: 100vh;
+
+  #start-game {
+    margin-top: 25%;
+  }
+}
+
+.game {
+  display: none;
+}
+
+#ipsum {
+  display: none;
+}

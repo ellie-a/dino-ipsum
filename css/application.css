@@ -30,4 +30,29 @@ time, mark, audio, video {
   font: inherit;
   vertical-align: baseline; }
 
+#start-game {
+  width: 30%;
+  height: 10%;
+  border-radius: 20px;
+  border: none;
+  background-color: rgba(81, 174, 181, 0.5);
+  color: white;
+  font-size: 155%;
+  letter-spacing: 1.5px; }
+
+.container {
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  background-color: #2f8735;
+  height: 100vh; }
+  .container #start-game {
+    margin-top: 25%; }
+
+.game {
+  display: none; }
+
+#ipsum {
+  display: none; }
+
 /*# sourceMappingURL=application.css.map */
