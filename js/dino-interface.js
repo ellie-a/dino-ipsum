@@ -21,19 +21,22 @@ $(document).ready(function() {
       $('.game').show();
       $('#start-game').hide();
       console.log(newDino.api_word);
+      console.log(newDino);
     });
 
     $('#guessForm').submit(function(event) {
       event.preventDefault();
+      var turnCounter = this.turnCounter;
       var guessed = $('#guessedLetter').val();
       $('#guessedLetter').val('');
       if (newDino.validator(guessed)){
-        console.log('validated');
         $('#answers').text(newDino.checker().join(''));
       }
+
       $('#guessedLetters').text(newDino['wrongLetters'].join(' '));
       if (newDino['guessCount'] === 6 && newDino.turnCounter !== 0) {
         $('.head').show();
+        turnCounter++;
       } else if (newDino['guessCount'] === 5 && newDino.turnCounter !== 0) {
         $('.head').show();
         $('.neck').show();
@@ -63,6 +66,7 @@ $(document).ready(function() {
         $('#ipsum').show();
       }
 
+      this['turnCounter'] = turnCounter;
       newDino.winner();
     });
 

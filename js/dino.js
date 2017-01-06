@@ -54,19 +54,15 @@ Dino.prototype.winner = function() {
 };
 
 Dino.prototype.validator = function(guessed) {
-  debugger;
   var guessCount = this.guessCount;
-  var turnCounter = this.turnCounter;
   var result = false;
   if (/^[a-zA-Z]+$/.test(guessed)) {
     this['guessed'] = guessed;
     result = true;
-    turnCounter++;
   } else {
     alert('Not a letter son!');
   }
   this['guessCount'] = guessCount;
-  this['turnCounter'] = turnCounter;
   return result;
 };
 
