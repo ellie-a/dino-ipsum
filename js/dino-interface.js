@@ -55,7 +55,14 @@ $(document).ready(function() {
         $('.chest').show();
         $('.torso').show();
         $('.leg').show();
-      } else if (newDino['guessCount'] <= 1 && newDino.turnCounter !== 0) {
+      } else if (newDino['guessCount'] === 1 && newDino.turnCounter !== 0) {
+        $('.head').show();
+        $('.neck').show();
+        $('.chest').show();
+        $('.torso').show();
+        $('.leg').show();
+        $('.tail').show();
+      } else if (newDino['guessCount'] === 0 && newDino.turnCounter !== 0) {
         $('.head').show();
         $('.neck').show();
         $('.chest').show();
