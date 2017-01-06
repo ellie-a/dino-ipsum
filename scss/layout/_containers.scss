@@ -12,6 +12,7 @@
   font-size: 105%;
 
 
+
   .start-page {
     margin-top: 15%;
     margin-left: 15%;
@@ -28,6 +29,27 @@
 
 .game {
   display: none;
+  h1 {
+    font-size: 120%;
+    margin-bottom: 2.5%;
+    text-shadow: 3px 3px 3px black;
+  }
+  #new-game{
+    text-shadow: 3px 3px 3px black;
+
+  }
+  #guessForm {
+    margin-top: 2.5%;
+    text-shadow: 3px 3px 3px black;
+    #submit {
+      margin-top: 2.5%;
+      text-shadow: 3px 3px 3px black;
+    }
+  }
+  #guessedLetters {
+    text-shadow: 3px 3px 3px black;
+
+  }
 }
 
 #ipsum {

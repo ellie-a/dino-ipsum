@@ -378,6 +378,20 @@ time, mark, audio, video {
 
 .game {
   display: none; }
+  .game h1 {
+    font-size: 120%;
+    margin-bottom: 2.5%;
+    text-shadow: 3px 3px 3px black; }
+  .game #new-game {
+    text-shadow: 3px 3px 3px black; }
+  .game #guessForm {
+    margin-top: 2.5%;
+    text-shadow: 3px 3px 3px black; }
+    .game #guessForm #submit {
+      margin-top: 2.5%;
+      text-shadow: 3px 3px 3px black; }
+  .game #guessedLetters {
+    text-shadow: 3px 3px 3px black; }
 
 #ipsum {
   display: none;
