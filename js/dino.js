@@ -4,6 +4,7 @@ function Dino() {
   this.dinoResult = [];
   this.guessCount= " ";
   this.wrongLetters = [];
+  this.turnCounter = 0;
 }
 
 Dino.prototype.startGame = function() {
@@ -17,12 +18,14 @@ Dino.prototype.checker = function(){
   var guessCount = this.guessCount;
   var dinoResult = this.dinoResult;
   var wrongLetters = this.wrongLetters;
+  var turnCounter = this.turnCounter;
 
     if(dinoResult.indexOf(letter) === -1){
       if(wordArray.indexOf(letter) === -1) {
         if(guessCount >= 1) {
           wrongLetters.push(letter);
           guessCount--;
+          turnCounter++;
           alert('you have ' + guessCount + ' guesses left');
         } else {
           alert('you lost son');
@@ -36,6 +39,7 @@ Dino.prototype.checker = function(){
         }
       }
     }
+    this.turnCounter = turnCounter;
     this.wrongLetters = wrongLetters;
     this.guessCount = guessCount;
     this.dinoResult = dinoResult;
@@ -50,15 +54,19 @@ Dino.prototype.winner = function() {
 };
 
 Dino.prototype.validator = function(guessed) {
+  debugger;
   var guessCount = this.guessCount;
+  var turnCounter = this.turnCounter;
   var result = false;
   if (/^[a-zA-Z]+$/.test(guessed)) {
     this['guessed'] = guessed;
     result = true;
+    turnCounter++;
   } else {
     alert('Not a letter son!');
   }
   this['guessCount'] = guessCount;
+  this['turnCounter'] = turnCounter;
   return result;
 };
 

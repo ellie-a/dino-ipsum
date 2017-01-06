@@ -28,30 +28,31 @@ $(document).ready(function() {
       var guessed = $('#guessedLetter').val();
       $('#guessedLetter').val('');
       if (newDino.validator(guessed)){
+        console.log('validated');
         $('#answers').text(newDino.checker().join(''));
       }
       $('#guessedLetters').text(newDino['wrongLetters'].join(' '));
-      if (newDino['guessCount'] === 6) {
+      if (newDino['guessCount'] === 6 && newDino.turnCounter !== 0) {
         $('.head').show();
-      } else if (newDino['guessCount'] === 5) {
+      } else if (newDino['guessCount'] === 5 && newDino.turnCounter !== 0) {
         $('.head').show();
         $('.neck').show();
-      } else if (newDino['guessCount'] === 4) {
+      } else if (newDino['guessCount'] === 4 && newDino.turnCounter !== 0) {
         $('.head').show();
         $('.neck').show();
         $('.chest').show();
-      } else if (newDino['guessCount'] === 3) {
+      } else if (newDino['guessCount'] === 3 && newDino.turnCounter !== 0) {
         $('.head').show();
         $('.neck').show();
         $('.chest').show();
         $('.torso').show();
-      } else if (newDino['guessCount'] === 2) {
+      } else if (newDino['guessCount'] === 2 && newDino.turnCounter !== 0) {
         $('.head').show();
         $('.neck').show();
         $('.chest').show();
         $('.torso').show();
         $('.leg').show();
-      } else if (newDino['guessCount'] <= 1) {
+      } else if (newDino['guessCount'] <= 1 && newDino.turnCounter !== 0) {
         $('.head').show();
         $('.neck').show();
         $('.chest').show();
