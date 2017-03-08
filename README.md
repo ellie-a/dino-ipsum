@@ -8,10 +8,10 @@
 
 
 ## Description:
+A web app that follows along the lines of hangman, where users get to guess letters to figure out what dinosaur it is.
 ![screenshot](shot1.png)
 ![screenshot](shot2.png)
 
-A web app that follows along the lines of hangman, where users get to guess letters to figure out what dinosaur it is.
 
 ## Setup/Installation Requirements
 
